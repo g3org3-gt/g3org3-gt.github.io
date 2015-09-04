@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Xik | JAVA</title>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:100,300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="../style.css" />
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/default.min.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body>
+	
+	<div class="navbar navbar-default navbar-static-top">
+		<div class="container">
+			<a href="/" class="navbar-brand">Xik | JAVA</a>
+			<ul class="nav navbar-nav">
+				<li>
+					<a href="/">Javascript</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="container">
+		<center>
+			<img src="https://scontent-mia1-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10703864_659078097541547_7637606855233566290_n.jpg?oh=f78576f8e52a83021881f0527b491985&oe=566DCF3D" alt="">
+		</center>
+		<h1>Ejercicios</h1>
+		<hr>
+		<p></p>
+		<pre><code class="java">import java.util.*;
+import java.lang.reflect.*;
+import java.lang.annotation.*;
+
+public class Main {
+	public static void main(String[] args) throws Exception {
+		Persona p = new Persona("Aristoteles", 1500);
+		p.setApellido("Filosofez");
+		
+		System.out.format("nombre: %s %s\n", p.getNombre(), p.getApellido());
+		System.out.format("edad  : %d\n", p.getEdad() );
+		
+		Class c1                   = Persona.class;
+		Constructor[] constructors = c1.getConstructors();
+		Method[] methods           = c1.getMethods();
+		String c1name              = c1.getName();
+		
+		// informacion general
+		System.out.println("\n\n==== Reflection ====");
+		System.out.format("Clase: [%s]\n", c1name);
+		
+		// mostrar constructores
+		System.out.println("\nConstructores");
+		for(Constructor c : constructors) {
+			System.out.format("Constructor > %s\n", c.toGenericString() );
+		}
+		
+		// mostrar campos
+		System.out.println("\nCampos");
+		for(Method m : methods) {
+			// buscar anotaciones
+			Annotation[] notes = m.getAnnotations();
+			System.out.format("Metodo (%d) > %s\n", notes.length,  m.toGenericString() );
+			for(Annotation n : notes) {
+				System.out.format("\t > %s\n", n.annotationType().getName() );
+			}
+		}
+	}
+}
+
+@Retention(RetentionPolicy.RUNTIME)
+@interface MiTest {
+}
+
+class Persona {
+	private String nombre;
+	private String apellido;
+	private int edad;
+	private String DPI;
+	private String[] cualidades;
+	private String[] defectos;
+	
+	public Persona(String nombre, int edad) {
+		this.nombre = nombre;
+		this.edad = edad;
+	}
+	
+	@MiTest
+	public void Ejecutame() {
+		System.out.println("me ejecutaste");
+	}
+	
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+	public String getNombre() {
+		return this.nombre;
+	}
+	
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+	public String getApellido() {
+		return this.apellido;
+	}
+	
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+	public int getEdad() {
+		return this.edad;
+	}
+	
+	public void setDPI(String DPI) {
+		this.DPI = DPI;
+	}
+	public String getDPI() {
+		return this.DPI;
+	}
+	
+}</code></pre>
+	</div>
+
+</body>
+</html>
