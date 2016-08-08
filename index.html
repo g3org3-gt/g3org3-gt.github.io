@@ -5,14 +5,15 @@
 	<title>Xik | Javascript</title>
 	<link href='https://fonts.googleapis.com/css?family=Roboto:100,300' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css" />
-	<link rel="stylesheet" href="style.css" />
 	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/default.min.css">
 	<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/solarized-dark.css">
 	<script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
-	
-	<div class="navbar navbar-default navbar-static-top">
+
+	<div class="navbar navbar-default navbar-fixed-top">
 		<div class="container">
 			<a href="/" class="navbar-brand">Xik | Javascript</a>
 			<ul class="nav navbar-nav">
@@ -25,37 +26,46 @@
 
 	<div class="container">
 		<center>
-			<img src="https://scontent-mia1-1.xx.fbcdn.net/v/t1.0-9/10703864_659078097541547_7637606855233566290_n.jpg?oh=3d759467842bc06645b41fb23e027c1b&oe=5820DE3D" alt="">
-			+
-			<img src="https://node-os.com/images/nodejs.png" alt="">
+			<img height="70px" src="https://node-os.com/images/nodejs.png" alt="">
+      <img height="50px" src="https://scontent-mia1-1.xx.fbcdn.net/v/t1.0-9/10703864_659078097541547_7637606855233566290_n.jpg?oh=3d759467842bc06645b41fb23e027c1b&oe=5820DE3D" alt="">
 		</center>
 		<h1>Ejercicios</h1>
-		<hr>
-		<p>1. Escriba una funcion que imprima los numeros de 1 a N y que entre cada impresion debe de esperar 2 segundos para poder imprimir el siguiente. (solo numeros pares)</p>
-		<pre><code class="javascript">myprint(10);
+
+    <div class="row">
+      <div class="col-sm-6">
+        <p>1. Escriba una funcion que imprima los numeros de 1 a N y que entre cada impresion debe de esperar 2 segundos para poder imprimir el siguiente. (solo numeros pares)</p>
+        <pre><code class="javascript">myprint(10);
 > 2
 // sleep 2 segundos
 > 4
 // sleep 2 segundos
 > 6
 // ...
-</code></pre>
+</code></pre></div>
+    </div>
 
+    <div class="row">
+      <div class="col-sm-6">
 		<p>2. Escriba una funcion que busque en un arreglo un dato y devuelva el indice.
 			<pre><code class="javascript">function findInArray(array, value) {
     var index;
-    return index; 
+    return index;
 }
 findInArray(["hola", 2, 'mundo', "c", null], "hola");
 > 0
-</code></pre>
-		<p>3. Escriba una funcion SUM que sume n numeros. 
+</code></pre></div></div>
+
+<div class="row">
+  <div class="col-sm-6">
+		<p>3. Escriba una funcion SUM que sume n numeros.
 		</p>
 		<pre><code class="javascript">sum(1, 2, 4, 5);
 > 12
 sum(4, 6);
-> 10</code></pre>
-	
+> 10</code></pre></div></div>
+
+<div class="row">
+  <div class="col-sm-6">
 	<p>4. Escribe una clase Humano que guarde los siguientes datos.</p>
 	<pre><code class="javascript">var miguel = new Humano("miguel", 20, "azul");
 // imprimiendo sus campos
@@ -67,14 +77,24 @@ console.log(miguel.old);
 // Crear el metodo toJSON() para poder devolver sus campos como un json;
 console.log(miguel.toJSON());
 > {name: "miguel", old: 20, color: "azul"}
-</code></pre>	
+</code></pre></div></div>
 
+<div class="row">
+  <div class="col-sm-6">
 <p>5. [Extra] [Reto] Escribe una funcion mult que se pueda llamar de estas dos formas. Para multiplicar 2 numeros.
 		</p>
 		<pre><code class="javascript">mult(2, 9);
 > 18
 mult(4)(6);
-> 24</code></pre>
+> 24</code></pre></div></div>
+
+<div class="row">
+  <div class="col-sm-6">
+    <a href="https://github.com/creationix/nvm#node-version-manager-" target="_blank">¿Como instalo nodejs?</a>
+  </div>
+</div>
+
+
 Envia tu respuesta a jorge@xik.gt
 	</div>
 

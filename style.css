@@ -1,12 +1,13 @@
 
 body {
+  padding-top: 70px;
 	background-color: #f8f8f8;
 	font-family: 'Roboto', sans-serif;
 }
 
 .navbar-default {
 	background-color: white;
-	border-bottom: 1px solid #FEB14C;
+	border-bottom: 4px solid #E6B549;
 }
 
 body>.container {
@@ -14,9 +15,6 @@ body>.container {
 	box-shadow: 0px 0px 8px -4px #777;
 	padding: 20px;
 	border-radius: 5px;
-}
-body>.container img {
-	height: 60px;
 }
 
 p {
@@ -27,4 +25,15 @@ hr {
 	boder: 0px;
 	height: 0px;
 	border-top: 1px solid #eee;
+}
+
+pre {
+  padding: 0px;
+  background-color: transparent;;
+  border: 0px solid #ccc;
+}
+
+.row {
+  border-top: 1px solid #eee;
+  padding: 20px;
 }
